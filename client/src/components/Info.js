@@ -7,7 +7,7 @@ const Info = () => {
 
     const getUrl = (x) => {
         console.log(x);
-        const url = `http://localhost:8000/api/whois/${x}`
+        const url = `https://whois-api-app.herokuapp.com/api/whois${x}`
         fetch(url)
         .then(res => res.json())
         .then(response => setDomainInfo(response))
