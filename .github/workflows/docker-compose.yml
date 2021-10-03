@@ -20,5 +20,5 @@ jobs:
           username: ${{ codylacey }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
-          repository: CodyLacey/whois-api
+          repository: CodyLacey/whois-api/backend
           tag_with_ref: true
