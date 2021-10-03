@@ -16,7 +16,7 @@ jobs:
         # This action will automatically build our docker image using
         # the Dockerfile in the project's root, and publish it to our
         # Heroku application instance.
-      - name: Deploy to Heroku
+      - name: Deploy to Heroku.
         id: heroku
         uses: jctaveras/heroku-deploy@v2.1.3
         with:
