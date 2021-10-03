@@ -1,0 +1,17 @@
+services:
+  backend:
+    env_file:
+        "./backend/.env"
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile
+    image: "codylacey/whois-back"
+    ports:
+      - "8000:8000"
+  frontend:
+    build:
+      context: ./client
+      dockerfile: ./Dockerfile
+    image: "codylacey/whois-front"
+    ports:
+      - "3000:3030"
