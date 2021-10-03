@@ -11,7 +11,7 @@ const Info = () => {
         if(domainUrl.includes('.com') || domainUrl.includes('.net') || domainUrl.includes('.org') || domainUrl.includes('.co') || domainUrl.includes('.app') || domainUrl.includes('.ai') || domainUrl.includes('.biz') || domainUrl.includes('.dev') || domainUrl.includes('.link') || domainUrl.includes('.live') || domainUrl.includes('.online') || domainUrl.includes('.site') || domainUrl.includes('.top') || domainUrl.includes('.tv') || domainUrl.includes('.us') || domainUrl.includes('.xyz') || domainUrl.includes('.gov')) 
         {
             console.log(x);
-            const url = `api/whois/${x}`
+            const url = `https://whois-api-app.herokuapp.com/api/whois/${x}`
             fetch(url)
             .then(res => res.json())
             .then(response => setDomainInfo(response))
