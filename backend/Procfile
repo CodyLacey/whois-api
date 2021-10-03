@@ -1,0 +1,2 @@
+Procfile
+web: node dist/main.js
