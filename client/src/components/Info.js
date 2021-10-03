@@ -1,17 +1,27 @@
 import React, {useState} from 'react'
 
 const Info = () => {
-
+    
     const [domainUrl, setDomainUrl] = useState('')
     const [domainInfo, setDomainInfo] = useState(null)
 
+
     const getUrl = (x) => {
-        console.log(x);
-        const url = `api/whois/${x}`
-        fetch(url)
-        .then(res => res.json())
-        .then(response => setDomainInfo(response))
+
+        if(domainUrl.includes('.com') || domainUrl.includes('.net') || domainUrl.includes('.org') || domainUrl.includes('.co') || domainUrl.includes('.app') || domainUrl.includes('.ai') || domainUrl.includes('.biz') || domainUrl.includes('.dev') || domainUrl.includes('.link') || domainUrl.includes('.live') || domainUrl.includes('.online') || domainUrl.includes('.site') || domainUrl.includes('.top') || domainUrl.includes('.tv') || domainUrl.includes('.us') || domainUrl.includes('.xyz') || domainUrl.includes('.gov')) 
+        {
+            console.log(x);
+            const url = `api/whois/${x}`
+            fetch(url)
+            .then(res => res.json())
+            .then(response => setDomainInfo(response))
+        }else {
+            alert('Oops please add a TLD to your domain!')
+            console.log(x);
+        }
+        
     }
+
     if(domainInfo){
         return (
         <div>
@@ -260,8 +270,8 @@ const Info = () => {
 
     return (
         <div className='form'>
-                <input value={domainUrl} onChange={e => setDomainUrl(e.target.value)} placeholder='Search for any domain' required></input>
-            <button classname='search' onClick={() => getUrl(domainUrl)}>Search</button>
+            <input value={domainUrl} id='domainUrlId' onChange={e => setDomainUrl(e.target.value)} placeholder='Search for any domain' required></input>
+            <button className='search' onClick={() => getUrl(domainUrl)}>Search</button>
                 
         </div>
     )

@@ -67,7 +67,9 @@ tfoot td {
 span{
   padding-left: 50px;
 }
-
+/* .urlErr {
+  display: block;
+} */
 /* FORM */
 
 input {
