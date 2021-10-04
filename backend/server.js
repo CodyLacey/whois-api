@@ -18,7 +18,7 @@ server.applyMiddleware({ app })
 
 require('dotenv').config({path: './config/.env'})
 
-// Middleware
+// Middlewares
 app.set('view engine', 'ejs')
 app.use(cors());
 app.use(logger('dev'));
