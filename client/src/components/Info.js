@@ -8,7 +8,7 @@ const Info = () => {
 
     const getUrl = (x) => {
 
-        if(domainUrl.includes('.com') || domainUrl.includes('.net') || domainUrl.includes('.org') || domainUrl.includes('.co') || domainUrl.includes('.app') || domainUrl.includes('.ai') || domainUrl.includes('.biz') || domainUrl.includes('.dev') || domainUrl.includes('.link') || domainUrl.includes('.live') || domainUrl.includes('.online') || domainUrl.includes('.site') || domainUrl.includes('.top') || domainUrl.includes('.tv') || domainUrl.includes('.us') || domainUrl.includes('.xyz') || domainUrl.includes('.gov')) 
+        if(domainUrl.includes('.com') || domainUrl.includes('.net') || domainUrl.includes('.org') || domainUrl.includes('.co') || domainUrl.includes('.app') || domainUrl.includes('.ai') || domainUrl.includes('.biz') || domainUrl.includes('.dev') || domainUrl.includes('.link') || domainUrl.includes('.live') || domainUrl.includes('.online') || domainUrl.includes('.site') || domainUrl.includes('.top') || domainUrl.includes('.tv') || domainUrl.includes('.us') || domainUrl.includes('.xyz') || domainUrl.includes('.gov')|| domainUrl.includes('.io')) 
         {
             console.log(x);
             const url = `https://whois-api-app.herokuapp.com/api/whois/${x}`
