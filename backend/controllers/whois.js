@@ -1,4 +1,4 @@
-const Whois = require('../models/Whois')
+
 
 const axios = require("axios");
 const WHOISAPI = 'https://www.whoisxmlapi.com/whoisserver/WhoisService?';
